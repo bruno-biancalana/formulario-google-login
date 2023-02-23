@@ -53,6 +53,8 @@ body{
   border-radius: 5px;
   background: red;
 }
+
+/*TITULOS DOS CAMPOS*/
 .content form .user-details{
   display: flex;
   flex-wrap: wrap;
