@@ -146,13 +146,14 @@
             <input id="lastname" type="text" name="email" placeholder="Digite seu e-mail" required>
           </div>
           <div class="input-box">
-            <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+            <label for="number">Celular (com DDD)</label>
+                        <input id="number" type="tel" maxlength="11" name="number" placeholder="(xx) xxxx-xxxx" required>
           </div>
           <div class="input-box">
             <label for="data">Data de nascimento</label>
             <input id="dt_nsc" type="date" name="nascimento" placeholder="dd/mm/aaaa" required>
           </div>
+          
         </div>
         <div class="gender-details">
           <input type="radio" name="gender" value="Masculino" id="dot-1">
