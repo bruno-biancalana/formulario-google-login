@@ -19,7 +19,7 @@
   <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon" />
 </head>
 
-<body onload="mensagem(); btg()">
+<body onload="mensagem()">
 
   <div class="menu">
     <a href="https://svriglobal.com">
@@ -74,7 +74,18 @@
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Enviar">
+          <script>
+                                        function botao(){
+                                        Swal.fire({
+                                            position: 'top-center',
+                                            icon: 'success',
+                                            title: 'Dados enviados com sucesso',
+                                            showConfirmButton: false,
+                                            timer: 3000
+                                        })}
+          </script>
+
+          <input onclick="botao()" type="submit" value="Enviar">
         </div>
       </form>
     </div>

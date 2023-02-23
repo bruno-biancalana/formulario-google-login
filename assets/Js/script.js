@@ -26,13 +26,5 @@ const { value: accept } = await Swal.fire({
   }
 })
 
-//Alert após envio de dados na página Form (chamada na linha 50) ->
-function botao(){
-  Swal.fire({
-    position: 'top-center',
-    icon: 'success',
-    title: 'Dados enviados com sucesso',
-    showConfirmButton: false,
-    timer: 3000
-  })}}
-  //Final do alert->
+}
+  
