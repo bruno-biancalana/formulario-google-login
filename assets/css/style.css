@@ -85,10 +85,14 @@ form .input-box span.details{
 .user-details .input-box input:valid{
   border-color: #9b59b6;
 }
+
+/*SEÇÃO DE CHECK RADIO*/
+/*Titulo Check de Radio*/
  form .gender-details .gender-title{
   font-size: 20px;
   font-weight: 500;
  }
+ /*Itens do Radio*/
  form .category{
    display: flex;
    width: 80%;
@@ -100,6 +104,7 @@ form .input-box span.details{
    align-items: center;
    cursor: pointer;
  }
+ /*Ponteiros das opções*/
  form .category label .dot{
   height: 18px;
   width: 18px;
