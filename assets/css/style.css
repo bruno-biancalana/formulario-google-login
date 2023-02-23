@@ -125,6 +125,8 @@ form .input-box span.details{
  form input[type="radio"]{
    display: none;
  }
+
+ /*Botão de envio*/
  form .button{
    height: 45px;
    margin: 35px 0
@@ -146,6 +148,8 @@ form .input-box span.details{
   /* transform: scale(0.99); */
   background: #ff0063;
   }
+
+  /*Media querys*/
  @media(max-width: 584px){
  .container{
   max-width: 100%;
