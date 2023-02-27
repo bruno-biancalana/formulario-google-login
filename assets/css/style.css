@@ -184,8 +184,17 @@ form .user-details .input-box{
     width: 5px;
   }
   }
+
+
   @media(max-width: 459px){
+    .container{
+      max-width: 100%;
+      margin-top: 6rem;
+    }
+
   .container .content .category{
     flex-direction: column;
   }
 }
+
+
