@@ -2,7 +2,7 @@
 *Coded by: Bruno Biancalana
 *Coded for: Science Valley Research Institute 
 *GitHub: https://github.com/bruno-biancalana
-*This GitRepositorie: https://github.com/bruno-biancalana/science_valley_voluntarios
+*This GitRepositorie: https://github.com/bruno-biancalana/recrutamento-victorion
 
                             *** FUNÇÕES ALERT/POPUP ** 
 */
