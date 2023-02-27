@@ -19,8 +19,8 @@
   <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon" />
 </head>
 
-<body onload="mensagem(); btg()">
-  <script src="https://accounts.google.com/gsi/client" async defer> </script>
+<body onload="mensagem(); btg()"> <!--CHAMADA DO POPUP INICIAL + FUNÇÃO DE RENDERIZAÇÃO DO GOOGLE-->
+  <script src="https://accounts.google.com/gsi/client" async defer> </script> <!--SCRIPT DA FUNÇÃO GOOGLE LOGIN-->
 
   <div class="menu">
     <a href="https://svriglobal.com">
@@ -131,6 +131,7 @@
                                      <!-- FIM DO BLOCO JAVASCRIPT-->
    
     <div class="content">
+      <!--####   INICIO DO FORMULÁRIO DE INFORMAÇÕES  ####-->
       <form action="https://api.sheetmonkey.io/form/gMDCt7tqWJruZEaMq3rwzC" method="post">
         <div class="user-details">
           <div class="input-box">
@@ -205,9 +206,9 @@
         </div>
           
         </div>
-
         
-
+        
+        <!-- BOTÃO DE ENVIO DE INFORMAÇÕES -->
         <div class="button">
           <script>
                                         function botao(){
@@ -222,7 +223,10 @@
 
           <input onclick="botao()" type="submit" value="Enviar">
         </div>
+        <!-- BOTÃO DE ENVIO DE INFORMAÇÕES -->
       </form>
+      <!--####   FIM DO FORMULÁRIO DE INFORMAÇÕES  ####-->
+      
     </div>
   </div>
 
