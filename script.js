@@ -95,7 +95,7 @@ function toggleModoEscuro() {
 
   // Salva a escolha do usuário no localStorage
   salvarModo(modoEscuroAtivo);
-}, 0.2);}
+}, 0.5);}
 
 // Aplica o modo salvo ao carregar a página
 aplicarModoSalvo();
