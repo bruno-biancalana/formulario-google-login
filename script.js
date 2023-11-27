@@ -101,4 +101,6 @@ function toggleModoEscuro() {
 }, 500);},0);}
 
 // Aplica o modo salvo ao carregar a página
-aplicarModoSalvo();
+window.addEventListener('load', () => {
+  aplicarModoSalvo();
+});
