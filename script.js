@@ -73,6 +73,8 @@ function toggleModoEscuro() {
   // Verifica se a classe modo-escuro está presente
   const modoEscuroAtivo = body.classList.contains('modo-escuro');
 
+
+  setTimeout(() => {
   // Atualiza o ícone e o rótulo do botão
   const iconeModo = document.getElementById('iconeModo');
   const modoEscuroBtn = document.getElementById('modoEscuroBtn');
@@ -84,9 +86,16 @@ function toggleModoEscuro() {
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
   }
 
+  const imgPrincipal = document.getElementById('img_principal');
+  if (modoEscuroAtivo) {
+    imgPrincipal.src = 'dark_green.png';
+  } else {
+    imgPrincipal.src = 'classic_white.png';
+  }
+
   // Salva a escolha do usuário no localStorage
   salvarModo(modoEscuroAtivo);
-}
+}, 0.2);}
 
 // Aplica o modo salvo ao carregar a página
 aplicarModoSalvo();
