@@ -18,19 +18,19 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-}
 
-.science-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 60%;
-    height: 100vh;
+    --cor-fundo-claro: #ffff; /* Cor de fundo do modo claro */
+    --cor-texto-claro: #333; /* Cor do texto do modo claro */
+    --cor-fundo-escuro: #333; /* Cor de fundo do modo escuro */
+    --cor-texto-escuro: #fff; /* Cor do texto do modo escuro */
+  
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .index-image {
@@ -54,30 +54,29 @@ body {
     min-height: 34rem;
 }
 
-.group {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: #ffffff;
     width: 100%;
     padding: 1.3rem 0;
-    border: 1px solid lightgray;
-}
+    border: 2px solid lightgray;
 
-.group:nth-child(1) {
-    min-height: 19rem;
-}
-
-.instagram-logo {
-    height: 3rem;
+    --cor-fundo-claro: #ffff; /* Cor de fundo do modo claro */
+    --cor-texto-claro: #333; /* Cor do texto do modo claro */
+    --cor-fundo-escuro: #333; /* Cor de fundo do modo escuro */
+    --cor-texto-escuro: #fff; /* Cor do texto do modo escuro */
+  
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .logo-index {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -85,62 +84,17 @@ body {
     height: 6rem;
 }
 
-.voluntario{
+.continuar{
     background-color: #0095f6;
     color: #ffffff;
     padding: 8px;
     border-radius: 4px;
 }
 
-.conhecer-science{
-    color: #0095f6;
-    margin-top: 1rem;
-}
-
-.not-account {
-    color: rgb(160, 160, 160);
-}
-
-.link-blue {
-    color: #0095f6;
-}
-
-.get-the-app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 1.3rem 0;
-}
-
-.download {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1rem;
-}
-
-.app-download {
-    height: 3rem;
-    width: 10rem;
-    background-size: cover;
-}
-
-.app-download:nth-child(1) {
-    background-image: url('/IMG/apple-button.png');
-}
-
-.app-download:nth-child(2) {
-    background-image: url('/IMG/googleplay-button.png');
-}
-
 .textohome {
     margin: 2rem;
     margin-bottom: 0;
     margin-top: 0;
-    background-color: #ffffff;
     color: black;
     padding: 8px;
     border-radius: 4px;
@@ -149,24 +103,7 @@ body {
 }
 
 /* media queries */
-
-@media (max-width: 2024px) {
-    .science-wrapper {
-        width: 90%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .science-wrapper {
-        width: 90%;
-    }
-}
-
 @media (max-width: 650px) {
-    .science-wrapper {
-        width: 90%;
-    }
-
     .index-image {
         display: none;
     }
@@ -175,8 +112,45 @@ body {
         width: 100%;
     }
     
-    .group {
+    .container {
         border: 1px solid transparent;
     }
 }
 
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #modoEscuroBtn {
+    display: flex;
+    align-items: center;
+  }
+  
+  #iconeModo {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+  }
+
+  body.modo-escuro {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-escuro);
+  }
+
+  .modo-escuro .container {
+    background-color: black;
+    color: var(--cor-texto-escuro);
+  }
+
+  .modo-escuro .continuar{
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.modo-escuro .textohome {
+    color: #ffff;
+}

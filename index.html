@@ -20,10 +20,13 @@
  
 
             <div class="box-principal">
-                <div class="group">
+                <div class="container">
                     <div class="logo-index">
                         <a href="https://bruno-biancalana-dev.netlify.app" target="_blank">
                         <img src="./IMG/classic_white.png" alt="Bruno Biancalana - web developer"></a>
+                        <button id="modoEscuroBtn" onclick="toggleModoEscuro()">
+                            <img id="iconeModo" src="/lua.png" alt="Lua" >
+                        </button>
                     </div>
                     
                     <p class="textohome"> &nbsp O seguinte website é um template de um formulário de captação de dados, com a api do Google Login. Esta tela serve como aviso sobre a politica de dados da empresa, para deixar o cliente ciente de seus direitos conforme a LGPD (no caso, era uma captação de voluntários para pesquisas clínicas). Segue: "Empresa" (nome da cia) é uma empresa global de inteligência em pesquisa clínica e serviços de pesquisa e desenvolvimento (P&D) na área da saúde, criada para promover, por meio de estudos clínicos, a melhoria da saúde humana e salvar vidas de pacientes com doenças severas. Para ser voluntário, a Empresa precisará de: </p>
@@ -45,7 +48,7 @@
                     <br>
                     <!--  BLOCO DO LINK DE POLITICA DE PRIVACIDADE (IUBENDA) -->
                     
-                    <a href="form.html" class="voluntario">Desejo continuar</a>
+                    <a href="form.html" class="continuar">Desejo continuar</a>
                     </div>
                     
 
@@ -61,6 +64,9 @@
         <i style="margin-top:16px" class="fa fa-whatsapp"></i>
         </a>
         <!--/Bloco Api Whatsapp-->
-
+        <script src="/script.js"></script>
+        <script>
+           aplicarModoSalvo();
+        </script>
     </body>
 </html>
