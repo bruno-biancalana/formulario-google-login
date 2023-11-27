@@ -94,8 +94,10 @@ function toggleModoEscuro() {
   }
 
   // Salva a escolha do usuário no localStorage
-  salvarModo(modoEscuroAtivo);
-}, 0.5);}
+  salvarModo(!modoEscuroAtivo);
+  setTimeout(() => {
+    imgPrincipal.classList.remove('transicao-imagem');
+}, 500);},0);}
 
 // Aplica o modo salvo ao carregar a página
 aplicarModoSalvo();
