@@ -73,6 +73,7 @@ function toggleModoEscuro() {
   // Verifica se a classe modo-escuro está presente
   const modoEscuroAtivo = body.classList.contains('modo-escuro');
 
+  iconeModo.classList.add('transicao-imagem');
 
   setTimeout(() => {
   // Atualiza o ícone e o rótulo do botão
