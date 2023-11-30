@@ -104,17 +104,18 @@ body {
 
 /* media queries */
 @media (max-width: 650px) {
-    .index-image {
-        display: none;
-    }
-
     .box-principal {
         width: 100%;
     }
     
     .container {
         border: 1px solid transparent;
+        height: 100%;
     }
+
+    body.modo-escuro {
+        background-color: black !important;
+      }
 }
 
 button {
