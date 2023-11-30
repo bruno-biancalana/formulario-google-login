@@ -13,7 +13,6 @@
   <meta charset="UTF-8">
   <title> Cadastro - Google Login </title>
 
-
   <link rel="stylesheet" href="./assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./IMG/favicon.ico" />
@@ -23,12 +22,15 @@
   <script src="https://accounts.google.com/gsi/client" async defer> </script> <!--SCRIPT DA FUNÇÃO GOOGLE LOGIN-->
 
   <div class="menu">
+    <div class="logo-index">
     <a href="https://bruno-biancalana-dev.netlify.app" target="_blank">
       <img src="./IMG/classic_white.png" alt="Bruno Biancalana - Web Developer" 
       id="img_principal"/></a>
-
+      <button id="modoEscuroBtn" onclick="toggleModoEscuro()">
+        <img id="iconeModo" src="/lua.png" alt="Lua" >
+    </button>
   </div>
-
+</div>
   <div class="container">
     <div class="title">Cadastro</div>
      <!-- ##################### API GOOGLE ##################### -->

@@ -216,6 +216,32 @@ body.modo-escuro {
 
 
 
+.logo-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#modoEscuroBtn {
+  display: flex;
+  align-items: center;
+}
+
+#iconeModo {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+
+
 
 
 
