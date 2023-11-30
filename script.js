@@ -28,7 +28,6 @@ const { value: accept } = await Swal.fire({
 
 }
 
-// script.js
 
 // Função para obter o modo salvo no localStorage
 function getModoSalvo() {
@@ -40,6 +39,8 @@ function aplicarModoSalvo() {
   const body = document.body;
   const modoEscuroBtn = document.getElementById('modoEscuroBtn');
   const iconeModo = document.getElementById('iconeModo');
+  const imgPrincipal = document.getElementById('img_principal');
+  
 
   const modoSalvo = getModoSalvo();
   
@@ -49,9 +50,11 @@ function aplicarModoSalvo() {
   // Atualiza o ícone e o rótulo do botão
   if (modoSalvo) {
     iconeModo.src = 'sol.png';
+    imgPrincipal.src = 'dark_green.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Claro');
   } else {
     iconeModo.src = 'lua.png';
+    imgPrincipal.src = 'classic_white.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
   }
 }
@@ -67,6 +70,7 @@ function salvarModo(modoEscuro) {
 function aplicarModoSalvo() {
   const body = document.body;
   const iconeModo = document.getElementById('iconeModo');
+  const imgPrincipal = document.getElementById('img_principal');
   const modoEscuroBtn = document.getElementById('modoEscuroBtn');
 
   // Verifica se o modo escuro está salvo
@@ -75,11 +79,13 @@ function aplicarModoSalvo() {
   // Atualiza o ícone e o rótulo do botão
   if (modoEscuroAtivo) {
     body.classList.add('modo-escuro');
+    imgPrincipal.src = 'dark_green.png';
     iconeModo.src = 'sol.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Claro');
   } else {
     body.classList.remove('modo-escuro');
     iconeModo.src = 'lua.png';
+    imgPrincipal.src = 'classic_white.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
   }
 }
