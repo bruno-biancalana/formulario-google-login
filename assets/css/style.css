@@ -212,6 +212,7 @@ body.modo-escuro {
 .modo-escuro .container {
   background-color: black;
   color: #fff;
+  border: 2px solid #fff;
 }
 
 
