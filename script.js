@@ -63,44 +63,51 @@ function salvarModo(modoEscuro) {
   localStorage.setItem('modoEscuro', modoEscuro);
 }
 
+// Função para aplicar o modo salvo
+function aplicarModoSalvo() {
+  const body = document.body;
+  const iconeModo = document.getElementById('iconeModo');
+  const modoEscuroBtn = document.getElementById('modoEscuroBtn');
+
+  // Verifica se o modo escuro está salvo
+  const modoEscuroAtivo = localStorage.getItem('modoEscuro') === 'true';
+
+  // Atualiza o ícone e o rótulo do botão
+  if (modoEscuroAtivo) {
+    body.classList.add('modo-escuro');
+    iconeModo.src = 'sol.png';
+    modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Claro');
+  } else {
+    body.classList.remove('modo-escuro');
+    iconeModo.src = 'lua.png';
+    modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
+  }
+}
+
 // Função para alternar entre os modos e salvar a escolha
 function toggleModoEscuro() {
   const body = document.body;
 
-  // Toggle da classe modo-escuro no body
-  body.classList.toggle('modo-escuro');
-
   // Verifica se a classe modo-escuro está presente
-  const modoEscuroAtivo = body.classList.contains('modo-escuro');
+  const modoEscuroAtivo = body.classList.toggle('modo-escuro');
 
-  iconeModo.classList.add('transicao-imagem');
-
-  setTimeout(() => {
   // Atualiza o ícone e o rótulo do botão
   const iconeModo = document.getElementById('iconeModo');
+  const imgPrincipal = document.getElementById('img_principal');
   const modoEscuroBtn = document.getElementById('modoEscuroBtn');
   if (modoEscuroAtivo) {
     iconeModo.src = 'sol.png';
+    imgPrincipal.src = 'dark_green.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Claro');
   } else {
     iconeModo.src = 'lua.png';
+    imgPrincipal.src = 'classic_white.png';
     modoEscuroBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
   }
 
-  const imgPrincipal = document.getElementById('img_principal');
-  if (modoEscuroAtivo) {
-    imgPrincipal.src = 'dark_green.png';
-  } else {
-    imgPrincipal.src = 'classic_white.png';
-  }
-
   // Salva a escolha do usuário no localStorage
-  salvarModo(!modoEscuroAtivo);
-  setTimeout(() => {
-    imgPrincipal.classList.remove('transicao-imagem');
-}, 500);},0);}
+  localStorage.setItem('modoEscuro', modoEscuroAtivo);
+}
 
 // Aplica o modo salvo ao carregar a página
-window.addEventListener('load', () => {
-  aplicarModoSalvo();
-});
+aplicarModoSalvo();
