@@ -110,7 +110,6 @@ body {
     
     .container {
         border: 1px solid transparent;
-        height: 100%;
     }
 
     body.modo-escuro {
