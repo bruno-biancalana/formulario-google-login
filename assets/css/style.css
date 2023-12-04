@@ -215,6 +215,11 @@ body.modo-escuro {
   border: 2px solid #fff;
 }
 
+.modo-escuro form .button input {
+  background-color: #c8f560;
+  color: black;
+}
+
 
 
 .logo-index {
